@@ -1,0 +1,21 @@
+body {
+    font-family: Roboto, Arial;
+    margin: 0;
+    padding-top: 100px;
+    padding-left: 90px;
+    padding-right: 9px;
+    height: 1000px;
+    background-color: black;
+    scrollbar-width: none;
+}
+
+p {
+    margin: 0;
+    color: white
+}
+
+@media (max-width:780px) {
+    body {
+        padding-left: 9px;
+    }
+}

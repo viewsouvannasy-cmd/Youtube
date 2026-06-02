@@ -1,0 +1,58 @@
+.vdieo-sidebar {
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    color: white;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    width: 58px;
+    top: 50px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.sidebar-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    transition: background-color 0.15s;
+    cursor: pointer;
+}
+
+.sidebar-icon:hover {
+    background-color: rgba(128, 128, 128, 0.258);
+
+}
+
+.sidebar-button {
+    border: none;
+    background: none;
+}
+
+.icon {
+    height: 20px;
+    margin-bottom: 2px;
+}
+
+.sidebar-button-sub {
+    font-size: 9px;
+}
+
+@media (max-width:780px) {
+
+    .vdieo-sidebar,
+    .sidebar-icon,
+    .sidebar-button,
+    .icon,
+    .sidebar-button-sub {
+        display: none;
+    }
+
+}
