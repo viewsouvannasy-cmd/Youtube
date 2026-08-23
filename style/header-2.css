@@ -4,7 +4,7 @@
     top: 50px;
     left: 66px;
     right: 0;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--surface);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
@@ -23,7 +23,8 @@
 }
 
 .vdieo-type-all {
-    background-color: white;
+    background-color: var(--chip-all-bg);
+    color: var(--chip-all-text);
     padding: 6px 10px;
     border-radius: 7px;
     font-size: 13px;
@@ -33,12 +34,12 @@
 }
 
 .vdieo-type {
-    background-color: rgba(255, 255, 255, 0.204);
+    background-color: var(--chip);
     padding: 6px 10px;
     border-radius: 7px;
     font-size: 13px;
     font-weight: 500;
-    color: white;
+    color: var(--text);
     cursor: pointer;
     flex: 0 0 auto;
 }

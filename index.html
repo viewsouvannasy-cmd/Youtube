@@ -16,6 +16,15 @@
     <link rel="stylesheet" href="style/header-2.css" />
     <link rel="stylesheet" href="style/vdieo-section.css" />
     <link rel="stylesheet" href="style/youtube-shorts.css" />
+    <script>
+      (function () {
+        var theme = localStorage.getItem("theme");
+        document.documentElement.setAttribute(
+          "data-theme",
+          theme === "light" ? "light" : "dark"
+        );
+      })();
+    </script>
   </head>
 
   <body>
@@ -58,6 +67,12 @@
             <img class="plus" src="youtube-icon/plus.svg" />
             <span class="button-create-sub"> Create</span>
           </div>
+          <button class="theme-toggle" type="button" aria-label="Switch to light theme">
+            <span class="theme-toggle-track">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-tooltip">light mode</span>
+          </button>
           <button class="button-notification">
             <img
               class="youtube-notification"
@@ -519,5 +534,6 @@
         </div>
       </div>
     </section>
+    <script src="script/theme.js"></script>
   </body>
 </html>

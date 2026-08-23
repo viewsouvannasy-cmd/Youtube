@@ -141,6 +141,10 @@
 .views-youtube-shorts-2,
 .views-youtube-shorts-1 {
     font-size: 11px;
-    color: rgb(194, 194, 194);
+    color: var(--muted-soft);
     margin-top: 5px;
+}
+
+.icon-thir-dot-youtube-shorts {
+    filter: var(--icon-filter);
 }

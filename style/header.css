@@ -1,6 +1,6 @@
 .video-head {
     display: flex;
-    background-color: black;
+    background-color: var(--surface);
     align-items: center;
     justify-content: space-between;
     padding-top: 5px;
@@ -31,7 +31,16 @@
 }
 
 .hamburger-bar:hover {
-    background-color: rgba(128, 128, 128, 0.258);
+    background-color: var(--hover);
+}
+
+.hamburger-bar,
+.search-icon,
+.icon-voice-search,
+.plus,
+.youtube-notification,
+.youtube-logo {
+    filter: var(--icon-filter);
 }
 
 .box-youtube-logo {
@@ -48,7 +57,7 @@
     position: absolute;
     top: 6px;
     right: 0;
-    color: rgb(200, 200, 200);
+    color: var(--muted);
     font-size: 9px;
 }
 
@@ -62,14 +71,14 @@
 .youtube-search {
     height: 31px;
     padding-left: 15px;
-    color: rgb(242, 242, 242);
-    border: 0.5px solid rgb(95, 95, 95);
+    color: var(--search-text);
+    border: 0.5px solid var(--search-border);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     font-size: 15px;
     flex: 1;
     width: 0;
-    background-color: rgba(23, 22, 22, 0.614);
+    background-color: var(--search-bg);
 }
 
 .youtube-search:focus {
@@ -77,9 +86,13 @@
     border: 1px solid rgb(0, 102, 255);
 }
 
+.youtube-search::placeholder {
+    color: var(--muted);
+}
+
 .button-search {
     border: none;
-    background-color: rgb(34, 34, 34);
+    background-color: var(--button-bg);
     display: flex;
     align-items: center;
     height: 34px;
@@ -87,7 +100,7 @@
     padding-right: 10px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border: 0.5px solid rgb(95, 95, 95);
+    border: 0.5px solid var(--search-border);
     border-left: none;
     cursor: pointer;
 }
@@ -102,7 +115,7 @@
     align-items: center;
     padding: 8px 8px;
     border-radius: 20px;
-    background-color: rgb(34, 34, 34);
+    background-color: var(--button-bg);
     margin-left: 15px;
     cursor: pointer;
     transition: background-color 0.15s;
@@ -111,15 +124,15 @@
 }
 
 .button-voice-search:hover {
-    background-color: rgb(60, 60, 60);
+    background-color: var(--button-hover);
 }
 
 .button-voice-search .voice-tooltip,
 .button-notification .notification-tooltip {
     position: absolute;
     white-space: nowrap;
-    background-color: rgba(60, 60, 60, 0.95);
-    color: white;
+    background-color: var(--tooltip-bg);
+    color: #ffffff;
     padding: 9px 6px;
     border-radius: 5px;
     font-size: 10px;
@@ -142,12 +155,66 @@
 .right-section {
     display: flex;
     align-items: center;
-    background-color: rgb(0, 0, 0);
-    width: 150px;
+    background-color: var(--surface);
     justify-content: space-between;
     margin-left: 30px;
-    width: 180px;
+    width: 230px;
     flex-shrink: 0;
+}
+
+.theme-toggle {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.theme-toggle-track {
+    width: 44px;
+    height: 24px;
+    border-radius: 20px;
+    background-color: var(--toggle-track);
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+}
+
+.theme-toggle-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--toggle-thumb);
+    transform: translateX(0);
+    transition: transform 0.2s;
+}
+
+html[data-theme="light"] .theme-toggle-thumb {
+    transform: translateX(20px);
+}
+
+.theme-toggle .theme-tooltip {
+    position: absolute;
+    white-space: nowrap;
+    background-color: var(--tooltip-bg);
+    color: #ffffff;
+    padding: 9px 6px;
+    border-radius: 5px;
+    font-size: 10px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+
+.theme-toggle:hover .theme-tooltip {
+    opacity: 1;
 }
 
 .button-create {
@@ -160,7 +227,7 @@
 }
 
 .button-create:hover {
-    background-color: rgba(128, 128, 128, 0.258);
+    background-color: var(--hover);
 }
 
 .plus {
@@ -168,7 +235,7 @@
 }
 
 .button-create-sub {
-    color: white;
+    color: var(--text);
     margin-left: 5px;
     font-size: 13px;
 }
@@ -187,7 +254,7 @@
 }
 
 .button-notification:hover {
-    background-color: rgba(128, 128, 128, 0.258);
+    background-color: var(--hover);
 }
 
 .youtube-notification {
