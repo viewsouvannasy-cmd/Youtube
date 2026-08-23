@@ -1,3 +1,46 @@
+:root,
+html[data-theme="dark"] {
+    --bg: #000000;
+    --surface: #000000;
+    --text: #ffffff;
+    --muted: rgb(156, 156, 156);
+    --muted-soft: rgb(194, 194, 194);
+    --search-bg: rgba(23, 22, 22, 0.614);
+    --search-text: rgb(242, 242, 242);
+    --search-border: rgb(95, 95, 95);
+    --button-bg: rgb(34, 34, 34);
+    --button-hover: rgb(60, 60, 60);
+    --hover: rgba(128, 128, 128, 0.258);
+    --chip: rgba(255, 255, 255, 0.204);
+    --chip-all-bg: #ffffff;
+    --chip-all-text: #000000;
+    --tooltip-bg: rgba(60, 60, 60, 0.95);
+    --toggle-track: #3f3f3f;
+    --toggle-thumb: #ffffff;
+    --icon-filter: none;
+}
+
+html[data-theme="light"] {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --text: #0f0f0f;
+    --muted: #606060;
+    --muted-soft: #606060;
+    --search-bg: #ffffff;
+    --search-text: #0f0f0f;
+    --search-border: #cccccc;
+    --button-bg: #f2f2f2;
+    --button-hover: #e5e5e5;
+    --hover: rgba(0, 0, 0, 0.08);
+    --chip: #f2f2f2;
+    --chip-all-bg: #0f0f0f;
+    --chip-all-text: #ffffff;
+    --tooltip-bg: #606060;
+    --toggle-track: #0f0f0f;
+    --toggle-thumb: #ffffff;
+    --icon-filter: invert(1);
+}
+
 body {
     font-family: Roboto, Arial;
     margin: 0;
@@ -5,13 +48,15 @@ body {
     padding-left: 90px;
     padding-right: 9px;
     height: 1000px;
-    background-color: black;
+    background-color: var(--bg);
+    color: var(--text);
     scrollbar-width: none;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 p {
     margin: 0;
-    color: white
+    color: var(--text);
 }
 
 @media (max-width:780px) {

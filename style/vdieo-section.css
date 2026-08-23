@@ -55,7 +55,7 @@
 
 .youtube-video:hover,
 .youtube-video-move:hover {
-    background-color: rgba(128, 128, 128, 0.258);
+    background-color: var(--hover);
 }
 
 .youtube-cover-page,
@@ -159,19 +159,19 @@
 .icon-ad-2,
 .icon-ad-1 {
     width: 20px;
-
+    filter: var(--icon-filter);
 }
 
 .channel-name,
 .channel-name-move {
     font-size: 13px;
-    color: rgb(156, 156, 156);
+    color: var(--muted);
     margin-top: 8px;
 }
 
 .video-view,
 .video-view-move {
-    color: rgb(156, 156, 156);
+    color: var(--muted);
     margin-top: 5px;
     font-size: 13px;
 }

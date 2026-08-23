@@ -1,10 +1,10 @@
 .vdieo-sidebar {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--surface);
     z-index: 1;
     display: flex;
     flex-direction: column;
     position: fixed;
-    color: white;
+    color: var(--text);
     align-items: center;
     left: 0;
     bottom: 0;
@@ -27,7 +27,7 @@
 }
 
 .sidebar-icon:hover {
-    background-color: rgba(128, 128, 128, 0.258);
+    background-color: var(--hover);
 
 }
 
@@ -39,6 +39,11 @@
 .icon {
     height: 20px;
     margin-bottom: 2px;
+    filter: var(--icon-filter);
+}
+
+.sidebar-icon img[src*="shorts"] {
+    filter: none;
 }
 
 .sidebar-button-sub {
